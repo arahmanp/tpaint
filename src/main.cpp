@@ -1,5 +1,7 @@
-#include <iostream>
+#include "colors_menu.hpp"
 
 int main() {
-    std::cout << "Hello, world!\n";
+    ColorsMenu menu;
+
+    menu.print();
 }
