@@ -12,4 +12,5 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(tpaint
     src/main.cpp
+    src/colors_menu.cpp
 )
