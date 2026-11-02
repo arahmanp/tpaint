@@ -17,12 +17,9 @@ private:
 public:
     ColorsMenu();
 
-    void moveSelectionUp();
-    void moveSelectionDown();
-    void moveSelectionRight();
-    void moveSelectionLeft();
+    std::string moveSelection(int k);
 
-    void handleKey(int key);
+    std::string getSelectedColor() const;
 
-    void print();
+    void print() const;
 };

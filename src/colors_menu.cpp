@@ -36,35 +36,33 @@ ColorsMenu::ColorsMenu() {
     };
 }
 
-void ColorsMenu::moveSelectionUp() {
-    if(selectedR > 0) selectedR--;
-}
+std::string ColorsMenu::moveSelection(int k) {
+    switch (k) {
+        case nbi::Key::Up: 
+            if(selectedR > 0) selectedR--;
+            break;
 
-void ColorsMenu::moveSelectionDown() {
-    if(selectedR < row - 1) selectedR++;
-}
+        case nbi::Key::Down:
+            if(selectedR < row - 1) selectedR++;
+            break;
 
-void ColorsMenu::moveSelectionRight() {
-    if(selectedC < col - 1) selectedC++;
-}
+        case nbi::Key::Right:
+            if(selectedC < col - 1) selectedC++;
+            break;
 
-void ColorsMenu::moveSelectionLeft() {
-    if(selectedC > 0) selectedC--;
-}
-
-void ColorsMenu::handleKey(int key) {
-    switch (key) {
-        case nbi::Key::Up: moveSelectionUp(); break;
-        case nbi::Key::Down: moveSelectionDown(); break;
-        case nbi::Key::Right: moveSelectionRight(); break;
-        case nbi::Key::Left: moveSelectionLeft(); break;
-
-        // ! temporary
-        case 'q': exit(0);
+        case nbi::Key::Left:
+            if(selectedC > 0) selectedC--;
+            break;
     }
+
+    return getSelectedColor();
 }
 
-void ColorsMenu::print() {
+std::string ColorsMenu::getSelectedColor() const {
+    return colors[selectedR][selectedC];
+}
+
+void ColorsMenu::print() const {
     std::cout << std::left;
 
     for(int i = 0; i < row; i++) {
