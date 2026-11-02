@@ -45,10 +45,12 @@ void ColorsMenu::print() {
 
             // TODO: observe this later
             if(i == selectedR && j == selectedC) {
-                std::cout << BOLD << UNDERLINE << ITALIC << FG_CYAN;
+                std::cout << BOLD << UNDERLINE << ITALIC << FG_CYAN
+                          << std::setw(30) << currentOpt
+                          << RESET;
+            } else {
+                std::cout << std::setw(30) << currentOpt << RESET;
             }
-
-            std::cout << std::setw(30) << currentOpt << RESET;
         }
 
         std::cout << "\n\n";
