@@ -32,5 +32,7 @@ public:
     void moveSelectionRight();
     void moveSelectionLeft();
 
+    void handleKey(int key);
+
     void print();
 };

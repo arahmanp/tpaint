@@ -1,6 +1,8 @@
 #include "colors_menu.hpp"
 #include "colors.hpp"
 #include "styles.hpp"
+#include "nbinput.hpp"
+#include <cstdlib>
 #include <iomanip>
 #include <ios>
 #include <iostream>
@@ -20,6 +22,18 @@ void ColorsMenu::moveSelectionRight() {
 
 void ColorsMenu::moveSelectionLeft() {
     if(selectedC > 0) selectedC--;
+}
+
+void ColorsMenu::handleKey(int key) {
+    switch (key) {
+        case nbi::Key::Up: moveSelectionUp(); break;
+        case nbi::Key::Down: moveSelectionDown(); break;
+        case nbi::Key::Right: moveSelectionRight(); break;
+        case nbi::Key::Left: moveSelectionLeft(); break;
+
+        // ! temporary
+        case 'q': exit(0);
+    }
 }
 
 void ColorsMenu::print() {

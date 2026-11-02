@@ -17,13 +17,7 @@ int main() {
         if(in.pressed()) {
             int k = in.poll();
 
-            switch (k) {
-                case nbi::Key::Up: menu.moveSelectionUp(); break;
-                case nbi::Key::Down: menu.moveSelectionDown(); break;
-                case nbi::Key::Right: menu.moveSelectionRight(); break;
-                case nbi::Key::Left: menu.moveSelectionLeft(); break;
-                case 'q': running = false; break;
-            }
+            menu.handleKey(k);
 
             moveCursorToHomePosition();
             menu.print();
