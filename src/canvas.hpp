@@ -17,7 +17,7 @@ private:
 public:
     Canvas();
 
-    void moveFocus(int k, Mode mode, std::string color);
+    void handleKey(int k, Mode mode, std::string color);
 
     void print();
 };

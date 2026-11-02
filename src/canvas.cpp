@@ -17,7 +17,7 @@ Canvas::Canvas() {
     canvas.assign(row, std::vector<std::string>(col, BG_WHITE + " " + RESET));
 }
 
-void Canvas::moveFocus(int k, Mode mode, std::string color) {
+void Canvas::handleKey(int k, Mode mode, std::string color) {
     switch (k) {
         case nbi::Key::Up:
             if(focusX > 0) focusX--;

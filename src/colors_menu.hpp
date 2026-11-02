@@ -17,7 +17,7 @@ private:
 public:
     ColorsMenu();
 
-    std::string moveSelection(int k);
+    void handleKey(int k);
 
     std::string getSelectedColor() const;
 

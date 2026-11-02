@@ -36,7 +36,7 @@ ColorsMenu::ColorsMenu() {
     };
 }
 
-std::string ColorsMenu::moveSelection(int k) {
+void ColorsMenu::handleKey(int k) {
     switch (k) {
         case nbi::Key::Up: 
             if(selectedR > 0) selectedR--;
@@ -54,8 +54,6 @@ std::string ColorsMenu::moveSelection(int k) {
             if(selectedC > 0) selectedC--;
             break;
     }
-
-    return getSelectedColor();
 }
 
 std::string ColorsMenu::getSelectedColor() const {
