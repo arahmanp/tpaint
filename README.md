@@ -1,1 +1,1 @@
-# TPaint: Terminal Version of Windows Paint
+# TPaint: A Simple, Terminal-based, Graphics Editor 🖌️
