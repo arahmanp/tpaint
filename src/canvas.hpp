@@ -19,5 +19,5 @@ public:
 
     void handleKey(int k, Mode mode, std::string color);
 
-    void print();
+    void print() const;
 };

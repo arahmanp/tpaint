@@ -41,7 +41,7 @@ void Canvas::handleKey(int k, Mode mode, std::string color) {
     }
 }
 
-void Canvas::print() {
+void Canvas::print() const {
     for(int i = 0; i < row; i++) {
         for(int j = 0; j < col; j++) {
             std::string currentPixel = canvas[i][j];
