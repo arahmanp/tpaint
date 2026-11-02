@@ -1,7 +1,15 @@
-#include "colors_menu.hpp"
+#include "nbinput.hpp"
+#include <iostream>
 
 int main() {
-    ColorsMenu menu;
+    nbi::Input in;
 
-    menu.print();
+    bool running = true;
+
+    while(running) {
+        int k = in.poll();
+        if(k != nbi::NONE) {
+            std::cout << "You pressed " << static_cast<char>(k) << '\n';
+        }
+    }
 }
