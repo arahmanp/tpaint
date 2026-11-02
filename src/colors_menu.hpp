@@ -27,5 +27,10 @@ private:
     int selectedC = 0;
 
 public:
+    void moveSelectionUp();
+    void moveSelectionDown();
+    void moveSelectionRight();
+    void moveSelectionLeft();
+
     void print();
 };

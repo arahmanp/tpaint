@@ -6,6 +6,22 @@
 #include <iostream>
 #include <string>
 
+void ColorsMenu::moveSelectionUp() {
+    if(selectedR > 0) selectedR--;
+}
+
+void ColorsMenu::moveSelectionDown() {
+    if(selectedR < row - 1) selectedR++;
+}
+
+void ColorsMenu::moveSelectionRight() {
+    if(selectedC < col - 1) selectedC++;
+}
+
+void ColorsMenu::moveSelectionLeft() {
+    if(selectedC > 0) selectedC--;
+}
+
 void ColorsMenu::print() {
     std::cout << std::left;
 
