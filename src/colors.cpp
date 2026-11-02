@@ -26,3 +26,7 @@ std::string renderBgColor(Color color) {
         case Color::White: return BG_WHITE;
     }
 }
+
+std::string resetStyle() {
+    return RESET;
+}
