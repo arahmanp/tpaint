@@ -1,5 +1,6 @@
 #pragma once
 
+#include "mode.hpp"
 #include <string>
 #include <vector>
 
@@ -15,6 +16,8 @@ private:
 
 public:
     Canvas();
+
+    void moveFocus(int k, Mode mode, std::string color);
 
     void print();
 };
