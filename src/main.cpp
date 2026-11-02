@@ -23,4 +23,7 @@ int main() {
             tpaint.render();
         }
     }
+
+    moveCursorToHomePosition();
+    clearScreen();
 }
