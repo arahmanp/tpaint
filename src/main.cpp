@@ -17,7 +17,7 @@ int main() {
         if(in.pressed()) {
             int k = in.poll();
 
-            menu.handleKey(k);
+            menu.moveSelection(k);
 
             moveCursorToHomePosition();
             menu.print();
