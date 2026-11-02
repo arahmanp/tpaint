@@ -21,3 +21,16 @@ const std::string BG_CYAN    = "\033[46m";
 const std::string BG_WHITE   = "\033[47m";
 
 const std::string RESET = "\033[0m";
+
+enum class Color {
+    Black,
+    Red,
+    Green,
+    Yellow,
+    Blue,
+    Magenta,
+    Cyan,
+    White,
+};
+
+std::string renderBgColor(Color color);

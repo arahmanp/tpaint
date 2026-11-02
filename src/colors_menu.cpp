@@ -31,8 +31,8 @@ ColorsMenu::ColorsMenu() {
     };
 
     colors = {
-        {BG_BLACK, BG_RED, BG_GREEN, BG_YELLOW},
-        {BG_BLUE, BG_MAGENTA, BG_CYAN, BG_WHITE}
+        {Color::Black, Color::Red, Color::Green, Color::Yellow},
+        {Color::Blue, Color::Magenta, Color::Cyan, Color::White}
     };
 }
 
@@ -56,7 +56,7 @@ void ColorsMenu::handleKey(int k) {
     }
 }
 
-std::string ColorsMenu::getSelectedColor() const {
+Color ColorsMenu::getSelectedColor() const {
     return colors[selectedR][selectedC];
 }
 

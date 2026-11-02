@@ -14,10 +14,10 @@ Canvas::Canvas() {
     focusX = 0;
     focusY = 0;
 
-    canvas.assign(row, std::vector<std::string>(col, BG_WHITE + " " + RESET));
+    canvas.assign(row, std::vector<Color>(col, Color::White));
 }
 
-void Canvas::handleKey(int k, Mode mode, std::string color) {
+void Canvas::handleKey(int k, Mode mode, Color color) {
     switch (k) {
         case nbi::Key::Up:
             if(focusX > 0) focusX--;
@@ -37,28 +37,31 @@ void Canvas::handleKey(int k, Mode mode, std::string color) {
     }
 
     if(mode == Mode::Draw) {
-        canvas[focusX][focusY] = color + " " + RESET;
+        canvas[focusX][focusY] = color;
     }
 }
 
 void Canvas::print() const {
     for(int i = 0; i < row; i++) {
         for(int j = 0; j < col; j++) {
-            std::string currentPixel = canvas[i][j];
+            Color currentPixelColor = canvas[i][j];
+
+            std::string pixel = renderBgColor(currentPixelColor);
 
             if(i == focusX && j == focusY) {
-                std::string bgFocus = currentPixel.substr(0, 5);
                 std::string sign = BOLD;
 
-                if(bgFocus == BG_BLACK) sign += FG_WHITE;
+                if(currentPixelColor == Color::Black) sign += FG_WHITE;
                 else sign += FG_BLACK;
 
                 sign += "+";
 
-                currentPixel = bgFocus + sign + RESET;
+                pixel += sign + RESET;
+            } else {
+                pixel += " " + RESET;
             }
 
-            std::cout << currentPixel;
+            std::cout << pixel;
         }
         std::cout << '\n';
     }

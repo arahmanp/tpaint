@@ -1,5 +1,6 @@
 #pragma once
 
+#include "colors.hpp"
 #include <string>
 #include <vector>
 
@@ -12,14 +13,14 @@ private:
     int selectedC;
 
     std::vector<std::vector<std::string>> options;
-    std::vector<std::vector<std::string>> colors;
+    std::vector<std::vector<Color>> colors;
 
 public:
     ColorsMenu();
 
     void handleKey(int k);
 
-    std::string getSelectedColor() const;
+    Color getSelectedColor() const;
 
     void print() const;
 };
