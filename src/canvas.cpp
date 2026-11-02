@@ -4,12 +4,15 @@
 #include <string>
 #include <vector>
 
-Canvas::Canvas() :
-    canvas(row, std::vector<std::string>(
-        col,
-        static_cast<std::string>(BG_WHITE) + " " + 
-            static_cast<std::string>(RESET)
-    )) {}
+Canvas::Canvas() {
+    row = 20;
+    col = 20;
+
+    focusX = 0;
+    focusY = 0;
+
+    canvas.assign(row, std::vector<std::string>(col, BG_WHITE + " " + RESET));
+}
 
 void Canvas::print() {
     for(int i = 0; i < row; i++) {
