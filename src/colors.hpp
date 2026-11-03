@@ -55,7 +55,7 @@ enum class Color {
     BrightBlue        = 12,
     BrightMagenta     = 13,
     BrightCyan        = 14,
-    BrightWhite       = 715,
+    BrightWhite       = 15,
 };
 
 std::string renderBgColor(Color color);
