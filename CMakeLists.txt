@@ -16,5 +16,4 @@ add_executable(tpaint
     src/canvas.cpp
     src/tpaint.cpp
     src/colors.cpp
-    src/styles.cpp
 )

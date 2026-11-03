@@ -33,6 +33,4 @@ enum class Color {
     White       = 7,
 };
 
-std::string renderFgColor(Color color);
 std::string renderBgColor(Color color);
-std::string resetStyle();
