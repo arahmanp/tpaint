@@ -27,11 +27,11 @@ void TPaint::handleKey(int k) {
 void TPaint::render() const {
     moveCursorToHomePosition();
 
-    menu.print();
+    menu.render();
 
     std::cout << '\n';
 
-    canvas.print();
+    canvas.render();
 
     std::cout << '\n';
 

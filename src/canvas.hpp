@@ -19,5 +19,5 @@ public:
 
     void handleKey(int k, Mode mode, Color color);
 
-    void print() const;
+    void render() const;
 };

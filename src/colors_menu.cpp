@@ -84,7 +84,7 @@ Color ColorsMenu::getSelectedColor() const {
     return colors[selectedR][selectedC];
 }
 
-void ColorsMenu::print() const {
+void ColorsMenu::render() const {
     std::cout << "Selected color: "
               << renderBgColor(getSelectedColor())
               << "    "

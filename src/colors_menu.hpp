@@ -22,5 +22,5 @@ public:
 
     Color getSelectedColor() const;
 
-    void print() const;
+    void render() const;
 };

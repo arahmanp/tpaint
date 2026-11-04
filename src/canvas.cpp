@@ -41,7 +41,7 @@ void Canvas::handleKey(int k, Mode mode, Color color) {
     }
 }
 
-void Canvas::print() const {
+void Canvas::render() const {
     for(int i = 0; i < row; i++) {
         for(int j = 0; j < col; j++) {
             Color currentPixelColor = canvas[i][j];
