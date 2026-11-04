@@ -47,7 +47,7 @@ Run it from a terminal:
 On Windows, configure and build with:
 
 ```powershell
-cmake -S . -B build
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release
 ```
 
